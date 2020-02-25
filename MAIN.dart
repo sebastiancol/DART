@@ -130,5 +130,30 @@ void main() {
   print(nombre+" "+apellido);
 
   //funciones 
+  /* main es la funcion principal void main() {} este main es para web
+  estructura de main en linea de comandos void main(List <String> arguments) {
+    print (arguments);
+  }
+  */
 
+  suma ();
+  sumaconparametros(4,5);
+  int regreso= sumaconretorno(4,5);
+  print(regreso);
 }
+
+//funciones vacias
+
+suma (){
+    print(3+5);
+  }
+
+//funciones con parametros
+void sumaconparametros(int a, int b){
+print(a+b);
+} 
+
+//funcion con retorno
+int sumaconretorno(int a, int b){
+return a+b;
+} 
