@@ -140,6 +140,23 @@ void main() {
   sumaconparametros(4,5);
   int regreso= sumaconretorno(4,5);
   print(regreso);
+  funcionflecha(3,5);
+  var resultado = funcionflecharetorno(3,9);
+  print(resultado);
+
+  //funcion anonima
+    List anonima= ['amarillo','azul','rojo'];
+  
+  anonima.forEach((val){
+    //print(val);
+     if (val=='rojo'){
+      print(val);
+    }
+  });
+print ('/n');
+paramrequeridos (4,5);
+paramopciones(4);
+paramopcionesnombrado(param2:6, param1:3);
 }
 
 //funciones vacias
@@ -151,9 +168,35 @@ suma (){
 //funciones con parametros
 void sumaconparametros(int a, int b){
 print(a+b);
+
+print(' /n ');
+paramrequeridos(3,4);
 } 
 
 //funcion con retorno
 int sumaconretorno(int a, int b){
 return a+b;
 } 
+
+//funciones flecha
+void funcionflecha (int a, int b)=>print ('el resultado sera ${a+b}');
+int funcionflecharetorno (int a,int b) => a+b;
+
+//parametros requeridos
+void paramrequeridos (int a, int b){
+  print('imprime param1 $a');
+  print('imprime param2 $b');
+}
+
+//parametros opcionales
+void paramopciones(int a, [int b]){
+  print('imprime param1 $a');
+  print('imprime param2 $b');
+}
+
+//parametros opccionales nombrados
+void paramopcionesnombrado({int param1, int param2=4}){
+  print('imprime param1 $param1');
+  print('imprime param2 $param2');
+
+}
