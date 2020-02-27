@@ -157,6 +157,73 @@ print ('/n');
 paramrequeridos (4,5);
 paramopciones(4);
 paramopcionesnombrado(param2:6, param1:3);
+
+//if else
+
+var nota=3;
+  
+ if(nota >=3 && nota <3.9){
+  print ('paso la materia raspando');
+}  
+  else if(nota >4 ){
+    print('le fue muy bien');
+  }
+  else {
+    print('repita la materia');
+  }
+print(' \n ');
+// switch case
+
+ 
+   var menu= 1;
+    
+  
+  switch (menu){
+      
+      
+    case 1: 
+      print ('se hara la suma');
+      break;
+         
+    case 2:  
+      print ('se hara la resta');
+      break;
+    case 3:
+      print ('se hara la multiplicacion');
+      break;
+    case 4:
+      print ('se hara la division');
+      break;
+    default:
+      print('no uso la opcion correcta');
+  }  
+  print(' \n ');
+  //ciclo for
+    for (int i=0;i<10;i++){
+    
+    print('el valor incrementado es $i');
+  }
+  print(' \n ');
+  //ciclo for in
+  
+    List <String> colores =['amarrilo','azul','rojo'];
+  
+  for(String color in colores ){
+    print(color);
+  }
+
+  //for in 
+  for(int i=0;i<=colores.length -1 ;i++){
+      print(colores[i]);
+  }
+  // for each de flat arrow
+  colores.forEach((color)=> print('funcion flecha'+color));
+
+  colores.forEach((color){
+    print(color);
+  });
+
+// fin main
 }
 
 //funciones vacias
@@ -200,3 +267,4 @@ void paramopcionesnombrado({int param1, int param2=4}){
   print('imprime param2 $param2');
 
 }
+
