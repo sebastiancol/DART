@@ -223,6 +223,77 @@ print(' \n ');
     print(color);
   });
 
+  // ciclo while
+  int i=0;
+  while (i<=10){
+    print ('valor actual $i');
+    i++;
+  }
+
+  // ciclo do while
+  do {
+     print ('-valor actual $i');
+    i++;
+  }while(i<=10);
+
+  //usos de break 
+  for(int i=1;i<=3;i++){
+
+    for(int j=1;j<=3;j++){
+      //print('$i $j');
+      if(i==2 && j==1) break;
+    }
+
+  }
+
+  //usos de continue
+   for(int i=1;i<=3;i++){
+
+    for(int j=1;j<=3;j++){
+      
+      if(i==2 && j==1) continue ;//break
+      print('$i $j -');
+    }
+
+  }
+
+  // uso de etiquetas
+  //forexterno: 
+  for(int i=1;i<=3;i++){
+
+    forinterno: for(int j=1;j<=3;j++){
+      
+      if(i==2 && j==1) continue forinterno;
+      print('$i $j *');
+    }
+  }
+
+  //uso de clase
+
+
+    //crear un objeto
+    Empleado emp = new Empleado ();
+
+    //uso de la instancia
+
+    emp.id=1;
+    emp.nombre="Roberto";
+
+    //if(emp.cumpliohorario()){
+    //    emp.trabajar();
+    //}
+
+    //otra manera de declar el objeto
+
+    Empleado emp2 = Empleado ()
+    ..id=2
+    ..nombre="Carlos";
+
+  //   if(emp2.cumpliohorario()){
+  //      emp2.trabajar();
+  //  }
+  emp.cumpliohorario()? emp.trabajar():print('no se presento a trabajar hoy');
+
 // fin main
 }
 
@@ -265,6 +336,23 @@ void paramopciones(int a, [int b]){
 void paramopcionesnombrado({int param1, int param2=4}){
   print('imprime param1 $param1');
   print('imprime param2 $param2');
+}
+
+//crear clases
+
+class Empleado {
+
+  var id;
+  var nombre;
+
+  bool cumpliohorario(){
+    return true;
+  }
+
+  void trabajar () {
+
+    print('El empleado con el $nombre realizo su trabajo ...');
+  }
 
 }
 
