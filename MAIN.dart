@@ -292,7 +292,22 @@ print(' \n ');
   //   if(emp2.cumpliohorario()){
   //      emp2.trabajar();
   //  }
-  emp.cumpliohorario()? emp.trabajar():print('no se presento a trabajar hoy');
+  emp2.cumpliohorario()? emp2.trabajar():print('no se presento a trabajar hoy');
+
+  //constructores por defecto
+  /* los que ya existen al crear la clase*/
+  Empleadoejem emple = new Empleadoejem(1,'juan');
+  emple.otro();
+
+  //constructores con parametros
+  /* los que ya existen al crear la clase, no pueden existiren la misma clase un constrcutor por defecto y uno con parametros*/
+   Empleadoejem emple2 = new Empleadoejem(2,'pepe');
+  emple2.trabajar();
+
+  //contructores nombrados
+  /* se pueden definir constructores con un nombre definido por nosotros y pueden eitir multiples constructores*/
+  Empleadoejem emple3 = Empleadoejem.trabajo(3,'raul', false);
+  emple3.cumpliohorario()? print('cumplio horario *'):print('no cumplio horario');
 
 // fin main
 }
@@ -344,7 +359,8 @@ class Empleado {
 
   var id;
   var nombre;
-
+ 
+  
   bool cumpliohorario(){
     return true;
   }
@@ -354,5 +370,44 @@ class Empleado {
     print('El empleado con el $nombre realizo su trabajo ...');
   }
 
+}
+
+class Empleadoejem{
+
+  var id;
+  var nombre;
+  var trabajo;
+
+  //metodo constructor
+ // Empleadoejem(){
+  //  print('primero');
+  //}
+
+  //metodo constructor con parametros
+  /*Empleadoejem (int id, String nombre){
+    this.id=id;
+    this.nombre=nombre;
+  }*/
+
+   //metodo constructor con parametros segunda forma
+  Empleadoejem (this.id,this.nombre);
+  //metodo constructor nombrado 
+
+  Empleadoejem.trabajo(this.id,this.nombre,this.trabajo);
+
+  bool cumpliohorario(){
+    return trabajo;
+  }
+
+  void otro (){
+    print('imprime segundo ');
+  }
+
+  void trabajar () {
+
+    print('El empleado con el $nombre realizo su trabajo ...');
+  }
+
+  
 }
 
