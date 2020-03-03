@@ -1,4 +1,8 @@
 
+//se llama el archvio de la clase
+import 'ejemplo.dart';
+import 'ejemplo2.dart';
+
 void main() {
 
   //PARA DECLARAR UNA VARIABLE 
@@ -309,6 +313,31 @@ print(' \n ');
   Empleadoejem emple3 = Empleadoejem.trabajo(3,'raul', false);
   emple3.cumpliohorario()? print('cumplio horario *'):print('no cumplio horario');
 
+  //uso de get y set
+  Trabajador tra = Trabajador();
+  tra.horaslaboradas=35;
+  //interpolacion $variable se usan las llaves ${tra.horaslaboradas} para usar la variable de la clase
+  print('El trabajador laboro ${tra.horaslaboradas} dias de la semana * ');
+
+  //uso de herencia
+  Chofer chofer = Chofer();
+  chofer.id=1;
+  chofer.nombre= "Roberto";
+  chofer.salario=100.0;
+  chofer.vehiculoasignado= "de trabajo";
+
+  chofer.calcularsalario();
+
+
+   Vendedor vendedor = Vendedor();
+   vendedor.id= 2;
+   vendedor.nombre="pedro" ;
+   vendedor.salario=120.0;
+   vendedor.venderCliente(); 
+
+  vendedor.calcularsalario();
+
+  
 // fin main
 }
 
@@ -410,4 +439,6 @@ class Empleadoejem{
 
   
 }
+
+
 
