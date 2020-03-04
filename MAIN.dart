@@ -1,5 +1,6 @@
 
 //se llama el archvio de la clase
+import 'abstraccion.dart';
 import 'ejemplo.dart';
 import 'ejemplo2.dart';
 
@@ -337,7 +338,23 @@ print(' \n ');
 
   vendedor.calcularsalario();
 
-  
+  // uso de abstraccion
+  Chofers chofer1 = Chofers();
+  chofer1.id=1;
+  chofer1.nombre= "Claudio *";
+  chofer1.salario=100;
+  chofer1.cacularSalario();
+  chofer1.actividad();
+
+  Cajeros cajero= Cajeros();
+  cajero.id=2;
+  cajero.nombre="Plutarco";
+  cajero.salario=120;
+  cajero.cacularSalario();
+  cajero.actividad();
+
+
+
 // fin main
 }
 
@@ -439,6 +456,9 @@ class Empleadoejem{
 
   
 }
+/*
+dart no tiwene definidas interface sino se que las clases toman las interfaces de manera implicita
+usando implements, a esto se le llama mixing 
 
-
+*/
 
