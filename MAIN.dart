@@ -141,6 +141,7 @@ void main() {
   }
   */
 
+  //uso de funciones
   suma ();
   sumaconparametros(4,5);
   int regreso= sumaconretorno(4,5);
@@ -213,11 +214,11 @@ print(' \n ');
   
     List <String> colores =['amarrilo','azul','rojo'];
   
+  //for in 
   for(String color in colores ){
     print(color);
   }
 
-  //for in 
   for(int i=0;i<=colores.length -1 ;i++){
       print(colores[i]);
   }
